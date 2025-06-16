@@ -34,20 +34,57 @@ class Array
 	public :
 	// {
 
-		Array( void );							//Canonical
-		Array( const Array &other);				//Canonical
-		Array &operator=( const Array &other );	//Canonical
-		~Array( void );							//Canonical
+		//			Array( void );
+		//			Array( const Array &other);
+		//			Array &operator=( const Array &other );
+		//			~Array( void );
+
+		//			Array(unsigned int n);
+		//			T &operator[]( const int &index );
+		//			const unsigned int size( void ) const;
+
+		Array( void ) : _n(0), _array(NULL) {}
+
+		Array( const Array &other) : _n(other._n), _array(new T[other._n])
+		{
+			for (unsigned int i = 0; i < this->_n; i++)
+				this->_array[i] = other._array[i];
+
+		}
+
+		Array &operator=( const Array &other )
+		{
+			if (*this != other)
+			{
+				delete[] this->_array;
+				this->_n = other._n;
+				this->_array = new T[this->_n];
+
+				for (unsigned int i = 0; i < this->_n; i++)
+					this->_array[i] = other._array[i];
+			}
+			return (*this);
+		}
+
+		~Array( void ) {}
 
 
-		Array(unsigned int n);
-
-		T &operator[]( const int &index );
+		Array(unsigned int n) : _n(n), _array(new T[n]) {}
 
 
-		unsigned int size( void ) const;
+		T &operator[]( const unsigned int &index )
+		{
+			if (index >= this->_n)
+				throw std::runtime_error("Wrong index");
+			return (this->_array[index]);
+		}
+
+
+
+		const unsigned int &size( void ) const { return (this->_n); }
 
 	// }
 };
+
 
 #endif

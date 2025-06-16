@@ -32,8 +32,7 @@ HEADERS				:=		Array.hpp
 
 
 
-SRC					:=		Array.cpp	\
-							main.cpp
+SRC					:=		main.cpp
 
 
 # for a new SRC add a new :
