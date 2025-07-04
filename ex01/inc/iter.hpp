@@ -6,7 +6,7 @@
 /*   By: fcretin <fcretin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:27:31 by fcretin           #+#    #+#             */
-/*   Updated: 2025/06/16 15:23:42 by fcretin          ###   ########.fr       */
+/*   Updated: 2025/07/04 09:11:28 by fcretin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@
 
 
 template <typename T>
-void	put(T e)
+void	put(const T e)
 {
 	std::cout << e ;
 }
 
 template <typename T>
-void	iter(T *a, size_t len, void (*f)(T))
+void	iter(const T *a, size_t len, void (*f)(T))
 {
 	for (size_t i = 0; i < len && a[i]; i++){
 		f(a[i]);

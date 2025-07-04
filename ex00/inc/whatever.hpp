@@ -6,14 +6,13 @@
 /*   By: fcretin <fcretin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:27:31 by fcretin           #+#    #+#             */
-/*   Updated: 2025/06/16 15:19:10 by fcretin          ###   ########.fr       */
+/*   Updated: 2025/07/03 11:27:39 by fcretin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 #define WHATEVER_HPP
 
-#include <iostream>
 
 #define RESET "\033[0m"
 #define RED "\033[31m"
