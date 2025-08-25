@@ -6,7 +6,7 @@
 /*   By: fcretin <fcretin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:27:31 by fcretin           #+#    #+#             */
-/*   Updated: 2025/07/03 11:27:39 by fcretin          ###   ########.fr       */
+/*   Updated: 2025/08/25 10:44:15 by fcretin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 #define GREEN  "\033[32m"
 #define BLUE  "\033[34m"
 #define YELLOW "\033[33m"
+
+#include <iostream>
 
 template <typename T>
 void swap(T &a, T &b)
@@ -52,4 +54,4 @@ T &max( T &a,  T &b)
 	return (a >= b) ? a : b;
 }
 
- #endif
+#endif
