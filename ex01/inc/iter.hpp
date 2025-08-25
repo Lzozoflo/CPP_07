@@ -6,7 +6,7 @@
 /*   By: fcretin <fcretin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:27:31 by fcretin           #+#    #+#             */
-/*   Updated: 2025/07/04 09:11:28 by fcretin          ###   ########.fr       */
+/*   Updated: 2025/08/25 10:39:59 by fcretin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,28 @@
 #define BLUE  "\033[34m"
 #define YELLOW "\033[33m"
 
-
 template <typename T>
-void	put(const T e)
+void	add_one(T &e)
 {
 	std::cout << e ;
 }
 
 template <typename T>
-void	iter(const T *a, size_t len, void (*f)(T))
+void	put(const T &e)
+{
+	std::cout << e ;
+}
+
+template <typename T>
+void	iter(T *a, size_t len, void (*f)(T &))
+{
+	for (size_t i = 0; i < len && a[i]; i++){
+		f(a[i]);
+	}
+}
+
+template <typename T>
+void	iter(T const *a, size_t len, void (*f)( T const &))
 {
 	for (size_t i = 0; i < len && a[i]; i++){
 		f(a[i]);
