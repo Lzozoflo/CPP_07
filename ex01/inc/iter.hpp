@@ -6,7 +6,7 @@
 /*   By: fcretin <fcretin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:27:31 by fcretin           #+#    #+#             */
-/*   Updated: 2025/08/25 10:39:59 by fcretin          ###   ########.fr       */
+/*   Updated: 2025/08/26 07:31:29 by fcretin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	put(const T &e)
 template <typename T>
 void	iter(T *a, size_t len, void (*f)(T &))
 {
-	for (size_t i = 0; i < len && a[i]; i++){
+	for (size_t i = 0; i < len; i++){
 		f(a[i]);
 	}
 }
@@ -44,7 +44,7 @@ void	iter(T *a, size_t len, void (*f)(T &))
 template <typename T>
 void	iter(T const *a, size_t len, void (*f)( T const &))
 {
-	for (size_t i = 0; i < len && a[i]; i++){
+	for (size_t i = 0; i < len; i++){
 		f(a[i]);
 	}
 }
